@@ -13,6 +13,8 @@
 
 // GAME DEF
 #define GAME_BACKGROUND_FILEPATH "Image/background.jpg"
+#define GAME_BACKGROUND1_FILEPATH "Image/background2.jpg"
+#define GAME_BACKGROUND2_FILEPATH "Image/background3.jpg"
 #define GAME_HOME_BUTTON "Image/Home Button.png"
 #define GAME_SOUND_BUTTON "Image/Sound On.png"
 
