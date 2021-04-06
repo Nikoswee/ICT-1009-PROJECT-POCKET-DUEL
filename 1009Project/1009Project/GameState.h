@@ -86,6 +86,7 @@ public:
 	//Events
 	void HandleInput();
 	void updateText();
+	void updateBackground();
 	void drawText(sf::RenderTarget& target);
 	void update(float dt);
 	void draw(float dt);
