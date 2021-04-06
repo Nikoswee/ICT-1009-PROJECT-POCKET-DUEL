@@ -284,6 +284,29 @@ void GameState::HandleInput()
 
 }
 
+void GameState::updateBackground()
+{
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num1)) {
+
+        this->_data->assets.LoadTexture("Background", GAME_BACKGROUND_FILEPATH);
+        this->_background.setTexture(this->_data->assets.GetTexture("Background"));
+    }
+
+    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num2)) {
+
+        this->_data->assets.LoadTexture("Background1", GAME_BACKGROUND1_FILEPATH);
+        this->_background.setTexture(this->_data->assets.GetTexture("Background1"));
+    }
+
+    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num3)) {
+
+        this->_data->assets.LoadTexture("Background2", GAME_BACKGROUND2_FILEPATH);
+        this->_background.setTexture(this->_data->assets.GetTexture("Background2"));
+    }
+
+}
+
 void GameState::drawText(sf::RenderTarget& target)
 {
     target.draw(this->uiGameTitle);
@@ -320,6 +343,7 @@ void GameState::update(float dt)
 {
     //Get Game Title
     this->updateText();
+    this->updateBackground();
 }
 
 void GameState::draw(float dt)
